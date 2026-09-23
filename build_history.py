@@ -2,8 +2,8 @@ import json, os, time
 from pathlib import Path
 from dotenv import load_dotenv
 from slack_sdk import WebClient
-from ai import embed
 load_dotenv()
+from ai import embed
 client=WebClient(token=os.environ['SLACK_BOT_TOKEN'])
 katy=os.environ['KATY_SLACK_USER_ID']
 out=Path('data/history.jsonl'); out.parent.mkdir(exist_ok=True)
